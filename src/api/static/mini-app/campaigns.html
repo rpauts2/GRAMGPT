@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaigns - GPTGRAM Ultimate</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .roi-preview { background: #e3f2fd; border-radius: 12px; padding: 15px; margin: 15px 0; border-left: 5px solid #2196f3; font-size: 13px; }
+        .roi-preview h4 { margin-bottom: 8px; color: #1976d2; }
+        .campaign-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding: 15px 0; }
+        .status-badge { padding: 4px 8px; border-radius: 6px; font-size: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" style="color: inherit;"><i class="fas fa-arrow-left"></i></a>
+        <h2>Кампании 🚀</h2>
+        <button class="btn" style="width: auto; padding: 8px 15px;" onclick="showROIPredictor()">+ Новая</button>
+    </div>
+
+    <div id="roi-modal" style="display:none;" class="card animate-in">
+        <div class="roi-preview">
+            <h4>🧠 AI Predictive ROI</h4>
+            <p>На основе анализа 10,000+ похожих кампаний:</p>
+            <ul style="padding-left: 15px; margin: 5px 0;">
+                <li>Ожидаемый результат: <b>500-700 лидов</b></li>
+                <li>Затраты: <b>00-300</b></li>
+                <li>Выручка (конверсия 10%): <b>,000-3,500</b></li>
+                <li><b>ROI: 900-1,500%</b></li>
+            </ul>
+            <button class="btn" style="margin-top: 10px;" onclick="tg.showAlert('Кампания запущена!')">Запустить</button>
+        </div>
+    </div>
+
+    <div class="card animate-in">
+        <div class="campaign-item">
+            <div>
+                <div style="font-weight: bold;">Продажа курсов Дизайн</div>
+                <div style="font-size: 12px; color: #999;">ROI: 1240% | Лидов: 450</div>
+            </div>
+            <span class="status-badge" style="background:#e8f5e9; color:#2ecc71;">Активна</span>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i></a>
+        <a href="campaigns.html" class="nav-item active"><i class="fas fa-tasks"></i></a>
+        <a href="dashboard.html" class="nav-item"><i class="fas fa-chart-pie"></i></a>
+        <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i></a>
+    </div>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+        function showROIPredictor() {
+            document.getElementById('roi-modal').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
